@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Ria Fashion is a wholesale ethnic wear destination for premium 3 piece suits, co-ord sets, and kurtis."
+  >
+  <title>Ria Fashion | Wholesale Ethnic Wear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-glow page-glow-left"></div>
+  <div class="page-glow page-glow-right"></div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="#home" aria-label="Ria Fashion Home">RIA FASHION</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel">
+        <a href="#home">Home</a>
+        <a href="#brands">Brands</a>
+        <div class="nav-dropdown">
+          <button class="dropdown-trigger" type="button" aria-expanded="false">
+            Collection
+          </button>
+          <div class="dropdown-menu">
+            <a href="#signature-edit" data-filter-link="kurtis">Kurtis</a>
+            <a href="#signature-edit" data-filter-link="coords">Co-ord Sets</a>
+            <a href="#signature-edit" data-filter-link="suits">Suit Sets</a>
+            <a href="#signature-edit" data-filter-link="all">All Collection</a>
+          </div>
+        </div>
+        <a class="nav-contact" href="#contact">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-fade" id="home">
+      <div class="hero-shell">
+        <div class="hero-gallery" aria-label="Featured Ria Fashion styles">
+          <figure class="hero-shot hero-shot-one">
+            <img src="Data/Banner/banner 1.jpeg" alt="Ethnic fashion look from Ria Fashion">
+          </figure>
+          <figure class="hero-shot hero-shot-two">
+            <img src="Data/Banner/banner 2.jpeg" alt="Designer ethnic wear look from Ria Fashion">
+          </figure>
+          <figure class="hero-shot hero-shot-three">
+            <img src="Data/Banner/banner 3.jpeg" alt="Premium handcrafted ethnic style from Ria Fashion">
+          </figure>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Wholesale Ethnic Wear</p>
+          <h1>STEAL THE SPOTLIGHT LIKE THEM</h1>
+          <p class="hero-subtitle">Timeless | Handcrafted | 100% Made In India</p>
+          <p class="hero-text">
+            Curated silhouettes, refined craftsmanship, and ready-to-order collections designed for modern retail counters.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Contact Us</a>
+            <a class="button button-secondary" href="#signature-edit">Explore Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-section section-fade" id="brands">
+      <div class="section-heading">
+        <p class="eyebrow">Our Labels</p>
+        <h2>Leading names in ethnic wholesale.</h2>
+      </div>
+      <div class="brands-shell">
+        <div class="brand-tags" role="list" aria-label="Ria Fashion brands">
+          <span class="brand-tag" role="listitem">Suryajyoti</span>
+          <span class="brand-tag" role="listitem">Hetvi</span>
+          <span class="brand-tag" role="listitem">Pranjul</span>
+        </div>
+        <div class="brand-points" aria-label="Brand highlights">
+          <div class="brand-point">
+            <span class="brand-point-value">Premium</span>
+            <p>Curated ethnic styles for modern retailers.</p>
+          </div>
+          <div class="brand-point">
+            <span class="brand-point-value">S-4XL</span>
+            <p>Broad size coverage across key collections.</p>
+          </div>
+          <div class="brand-point">
+            <span class="brand-point-value">India</span>
+            <p>Handcrafted and 100% made in India.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-intro section-fade" id="signature-edit">
+      <div class="section-heading">
+        <p class="eyebrow">Signature Edit</p>
+        <h2>Ten standout styles across suit sets, co-ords, and kurtis.</h2>
+      </div>
+      <div class="collection-topbar">
+        <p class="collection-note">
+          Sizes available across collections: <strong>S to 4XL</strong>. Use the collection tabs to filter featured styles instantly.
+        </p>
+        <div class="filter-tabs" aria-label="Filter featured collection">
+          <button class="filter-tab is-active" type="button" data-filter="all">All</button>
+          <button class="filter-tab" type="button" data-filter="suits">Suit Sets</button>
+          <button class="filter-tab" type="button" data-filter="coords">Co-ord Sets</button>
+          <button class="filter-tab" type="button" data-filter="kurtis">Kurtis</button>
+        </div>
+      </div>
+      <div class="product-grid featured-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="product-section section-fade" id="suits">
+      <div class="section-heading">
+        <p class="eyebrow">Signature Range</p>
+        <h2>Statement Suit Sets</h2>
+      </div>
+      <div class="product-grid" id="suits-grid"></div>
+    </section>
+
+    <section class="product-section section-fade" id="coords">
+      <div class="section-heading">
+        <p class="eyebrow">Contemporary Sets</p>
+        <h2>Co-ord Sets</h2>
+      </div>
+      <div class="product-grid" id="coords-grid"></div>
+    </section>
+
+    <section class="product-section section-fade" id="kurtis">
+      <div class="section-heading">
+        <p class="eyebrow">Everyday Luxe</p>
+        <h2>Kurtis</h2>
+      </div>
+      <div class="product-grid" id="kurtis-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-fade" id="contact">
+    <div class="footer-card">
+      <p class="eyebrow">Contact</p>
+      <h2>Let buyers discover your next bestseller.</h2>
+      <div class="footer-details">
+        <p><strong>Phone:</strong> <a href="tel:9022633284"><strong>9022633284</strong></a> / <a href="tel:9921065412"><strong>9921065412</strong></a></p>
+        <p><strong>Email:</strong> <a href="mailto:riafashion4@gmail.com"><strong>riafashion4@gmail.com</strong></a></p>
+        <p><strong>Address:</strong> <strong>Shop No.16, P.R Textile Market, Hanuman Galli, Ulhasnagar - 421002</strong></p>
+      </div>
+      <a class="button button-primary footer-button" href="https://wa.me/919022633284" target="_blank" rel="noreferrer">
+        Order on WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
