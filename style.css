@@ -29,8 +29,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
   min-width: 320px;
   font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   color: var(--text);
@@ -266,6 +272,14 @@ main,
   padding: 2rem 0 1.2rem;
 }
 
+.banner {
+  position: relative;
+  display: flex;
+  visibility: visible;
+  min-height: 90vh;
+  min-height: 100dvh;
+}
+
 .hero-shell {
   position: relative;
   overflow: hidden;
@@ -328,6 +342,12 @@ main,
   height: 29rem;
   object-fit: cover;
   transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.banner-images img {
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .hero-shot-one {
@@ -794,6 +814,14 @@ main,
 }
 
 @media (max-width: 980px) {
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: auto;
+  }
+
   .hero-shell {
     grid-template-columns: 1fr;
   }
@@ -803,8 +831,16 @@ main,
     padding-top: 0.5rem;
   }
 
+  .banner-images img {
+    height: 200px;
+  }
+
   .hero-copy {
     text-align: center;
+  }
+
+  .banner-content {
+    margin-top: 20px;
   }
 
   .hero-copy h1,
