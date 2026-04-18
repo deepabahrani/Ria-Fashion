@@ -272,12 +272,19 @@ main,
   padding: 2rem 0 1.2rem;
 }
 
+.hero.section-fade {
+  opacity: 1;
+  transform: none;
+}
+
 .banner {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   visibility: visible;
   min-height: 90vh;
   min-height: 100dvh;
+  height: auto;
 }
 
 .hero-shell {
@@ -321,8 +328,10 @@ main,
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  flex-wrap: nowrap;
   gap: clamp(0.8rem, 2vw, 1.1rem);
   min-height: 28rem;
+  width: 100%;
 }
 
 .hero-shot {
@@ -341,6 +350,7 @@ main,
   width: 100%;
   height: 29rem;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.45s ease, filter 0.45s ease;
 }
 
@@ -348,6 +358,12 @@ main,
   width: auto;
   max-width: 100%;
   display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-content {
+  padding: 10px;
 }
 
 .hero-shot-one {
@@ -813,26 +829,37 @@ main,
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 900px) {
   .banner {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    gap: 20px;
     min-height: auto;
   }
 
   .hero-shell {
     grid-template-columns: 1fr;
+    width: 100%;
+    min-height: auto;
   }
 
   .hero-gallery {
     min-height: auto;
     padding-top: 0.5rem;
+    align-items: stretch;
+  }
+
+  .banner-images {
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
   }
 
   .banner-images img {
-    height: 200px;
+    height: 180px;
+    transform: none;
   }
 
   .hero-copy {
@@ -841,6 +868,12 @@ main,
 
   .banner-content {
     margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .banner-content h1 {
+    font-size: 24px;
   }
 
   .hero-copy h1,
@@ -948,23 +981,30 @@ main,
 
   .hero {
     padding-top: 1.4rem;
+    min-height: auto;
   }
 
   .hero-shell {
     padding: 1.5rem;
+    gap: 1.25rem;
   }
 
   .hero-gallery {
-    gap: 0.65rem;
+    gap: 0.6rem;
+    justify-content: center;
   }
 
   .hero-shot {
-    width: 30%;
+    width: min(31%, 8.5rem);
     border-radius: 1.1rem;
+    flex: 1 1 0;
   }
 
   .hero-shot img {
-    height: 15.5rem;
+    width: 100%;
+    height: 13.5rem;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .brands-section,
@@ -1004,6 +1044,20 @@ main,
   .hero-copy h1 {
     font-size: 2.25rem;
     max-width: none;
+  }
+
+  .hero-gallery {
+    gap: 0.45rem;
+  }
+
+  .hero-shot {
+    width: min(31.5%, 6.8rem);
+    border-radius: 0.95rem;
+  }
+
+  .hero-shot img,
+  .banner-images img {
+    height: 11.25rem;
   }
 
   .hero-subtitle {
