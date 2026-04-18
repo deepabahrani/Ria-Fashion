@@ -830,6 +830,15 @@ main,
 }
 
 @media (max-width: 900px) {
+  .section-fade,
+  .section-fade.is-visible,
+  .hero.section-fade,
+  .hero.section-fade.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .banner {
     flex-direction: column;
     justify-content: center;
@@ -843,6 +852,7 @@ main,
     grid-template-columns: 1fr;
     width: 100%;
     min-height: auto;
+    overflow: visible;
   }
 
   .hero-gallery {
@@ -1021,6 +1031,13 @@ main,
   .product-card {
     grid-column: 1 / -1;
   }
+
+  .collection-topbar,
+  .brand-tags,
+  .thumb-strip,
+  .footer-details {
+    width: 100%;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1071,5 +1088,17 @@ main,
 
   .footer-button {
     width: 100%;
+  }
+
+  .section-heading h2,
+  .footer-card h2 {
+    max-width: none;
+  }
+
+  .collection-note,
+  .product-meta,
+  .brand-point p,
+  .footer-details {
+    font-size: 0.95rem;
   }
 }
